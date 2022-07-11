@@ -1,0 +1,31 @@
+<div class="modal fade" id="editCommentModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light">Edit a Review</h3>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body px-5">
+                <form id="commentForm">
+                    <div class="row" text-center id="editcommentBody">
+                        <label for="nickname">Nickname</label>
+                        <input type="text" id="editnickname" class="form-control" readonly>
+                        <label for="userComments">Review</label>
+                        <textarea id="edituserComments" required class="form-control form-rounded" rows="3"
+                            cols="100%"></textarea>
+                        <label for="popcorn">Review</label>
+                        <img src="images/popcorn_bw.png" class="editpop" value="1" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="editpop" value="2" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="editpop" value="3" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="editpop" value="4" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="editpop" value="5" onmouseover="rateIt(this)" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitComment"
+                            onClick="updateComment()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

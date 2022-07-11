@@ -1,0 +1,51 @@
+<!-- this is a structure of Bootstrap Modal -->
+<div class="modal fade" id="movieModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light" id="movieTitle">Modal title</h3>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <div class="col-xs-5">
+                        <img id="moviePoster" width="200">
+                    </div>
+                    <div class="col-xs-7">
+                        <table class="table table-hover table-responsive table-sm">
+                            <tr>
+                                <td><b>Neighbourhood</b></td>
+                                <td id="genre"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Postal Code</b></td>
+                                <td id="director" style=' width: 200px; word-wrap: break-word;'></td>
+                            </tr>
+                            <tr>
+                                <td><b>Opening Hours</b></td>
+                                <td id="release"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Cuisine</b></td>
+                                <td id="cast" style=' width: 300px; word-wrap: break-word;'>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button type="button" class="btn btn-warning" id="buy"
+                                        onClick="buyTicket()">Visit The Website</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-12 px-3"><b>Address </b>
+                    <p id="story"></p>
+                </div>
+                <!-- <div class="col-xs-12 px-3 text-center">
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer1"></iframe>
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer2"></iframe>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

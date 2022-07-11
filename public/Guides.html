@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <title> Bojio Review</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+        <script src="js/restaurant.js"></script>
+    </head>
+    <body onload="loadUser()">
+        <header>
+            <div class="container">
+              <div id="branding">
+                  <h1><a href="index.html">the<span class="highlight">Bojio</span>Review</a></h1>
+                  <h3>served to you by locals</h3>
+              </div>
+              <nav>
+                  <ul >
+                      <li class="current"><a href="Guides.html">Monthly Lobang</a></li>
+                      <li id="username"><a href="SignUp.html">Sign In</a></li>
+                  </ul>
+              </nav>  
+            </div>
+        </header>
+        
+        <br>
+
+        <div class="container">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/restaurant/Carousell3.jpg" class="d-block w-100 img-carousel1" alt="..." onclick="window.open('https://subwayisfresh.com.sg/whats-new/')">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5 class="restCarousel1">First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/restaurant/Carousell1.jpg" class="d-block w-100 img-carousel2" alt="..." onclick="window.open('https://www.kfc.com.sg')">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5 class="restCarousel2">Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/restaurant/Carousell2.jpg" class="d-block w-100 img-carousel3" alt="..." onclick="window.open('https://www.longjohnsilvers.com.sg/promotion')">
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5 class="restCarousel3">Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <br>
+
+        <br>
+
+        <div class="container">
+            
+            <p>
+                <h3 id="summary"></h3>
+            </p>
+
+            <div id="restaurantTable" class="row"></div>
+        </div>
+
+        <div w3-include-html="restaurant-modal.html"></div>
+        
+        <script src="js/w3.js"></script>
+
+        <script>
+            w3.includeHTML();
+        </script>
+
+        <script>
+                
+            function loadUser() {
+                if(sessionStorage.getItem("user").length !== 0) {
+                    var userName = document.getElementById("username");
+                    userName.innerHTML = `${sessionStorage.getItem('user')}`;
+                    console.log("user manage to sign in " + sessionStorage.getItem("user"));
+                } else {
+                    userName.innerHTML = "Log In";
+                    console.log("no user sign in");
+                }
+            }   
+            
+        </script>
+        <footer>
+            <p>Bojio Review, Copyright &copy; 2021</p>
+        </footer>
+    
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!-- this is a structure of Bootstrap Modal -->
+<div class="modal fade" id="commentModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h5 class="modal-title text-light" id="review">Review</h5>
+                <button type="button" class="btn btn-primary" id="newComment" data-toggle="modal" data-target="#newCommentModal"
+                    data-dismiss="modal" onClick="newComment()">New Review</button>
+            </div>
+            <div class="modal-body">
+                <div id="emptyComment">No review yet. Create one now</div>
+                <div class="row px-5" id="commentBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

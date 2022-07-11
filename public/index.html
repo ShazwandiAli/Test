@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TheBojioReview</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/movies.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/user.js"></script>
+</head>
+
+<body onload="getMovieData(); loadUser();">
+    <div w3-include-html="top-navigation.html"></div>
+    <div class="container">
+        <div class="row" id="parent">
+            Retrieving movies from database... Please wait...<br><br>
+            If you are seeing this message for a long time, it is likely
+            that you have a JavaScript error. Troubleshoot your script by
+            using the browser console panel now. Please use either Firefox
+            or Chrome to render this webpage.
+        </div>
+        <p>
+        <h3 id="summary"></h3>
+        </p>
+        <div id="moviesTable" class="row"></div>
+    </div>
+
+    <div w3-include-html="movies-modal.html"></div>
+
+    <div w3-include-html="comments-modal.html"></div>
+
+    <div w3-include-html="new-comments-modal.html"></div>
+
+    <div w3-include-html="edit-comments-modal.html"></div>
+
+    <div w3-include-html="message-modal.html"></div>
+    <br><br>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+<script src="js/w3.js"></script>
+<script>
+    w3.includeHTML();
+</script>
+
+<script>
+        
+    function loadUser() {
+        if(sessionStorage.getItem("user").length !== 0) {
+            var signIn = document.getElementById("signIn");
+            var userName = document.getElementById("username");
+            var modifyUser = document.getElementById('modifyUser');
+            var signOut = document.getElementById("signOut");
+            signIn.innerHTML = "";
+            signOut.innerHTML = "Log Out";
+            userName.innerHTML = sessionStorage.getItem("user");
+            modifyUser.innerHTML = "Update Details";
+            console.log("user manage to sign in " + sessionStorage.getItem("user"));
+        } else {
+            userName.innerHTML = "Log In";
+            console.log("no user sign in");
+        }
+    }   
+    
+</script>
+
+<script>
+    function signOut() {
+        sessionStorage.removeItem("user");
+        sessionStorage.removeItem("userId");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("phoneNumber");
+        sessionStorage.removeItem("address");
+        sessionStorage.removeItem("password");
+        location.reload();
+    }
+
+</script>
+
+
+</html>

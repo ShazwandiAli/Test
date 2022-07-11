@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div id="branding">
+        <h1><a href="index.html">the<span class="highlight">Bojio</span>Review</a></h1>
+        <h3>served to you by locals</h3>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navSupportedContent" style="margin-left: 20px;">
+        <ul class="navbar-nav">
+            <li class="nav-item active" id="nowMenu">
+                <a class="nav-link" href="#" id="now" onclick="listNowShowingMovies()">Restaurants</a>
+            </li>
+            <li class="nav-item" id="monthlyLobang">
+                    <a class="nav-link" href="Guides.html" id="coming" onclick="showMonthlyLobang()">Monthly Lobang</a>
+            </li>
+            <li class="nav-item" id="aboutMenu">
+                    <a class="nav-link" href="#" id="about" data-toggle="modal" data-target="#messageModal">About</a>
+            </li>
+
+            
+        </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="rightNavSupportedContent">
+        <ul class="navbar-nav">
+            <span id="username" class="navbar-text"></span>
+            <li class="nav-item" id="login">
+                <a id="signIn" class="nav-link" href="SignUp.html">Log In</a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:signOut()" class="nav-link" id="signOut"></a>
+            </li>
+            <li class="nav-item">
+                <a href="modifyUser.html" class="nav-link" id="modifyUser"></a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <script>
+        function signOut() {
+            sessionStorage.removeItem("user");
+            sessionStorage.removeItem("userId");
+            sessionStorage.removeItem("email");
+            sessionStorage.removeItem("phoneNumber");
+            sessionStorage.removeItem("address");
+            sessionStorage.removeItem("password");
+            location.reload();
+
+        }
+    </script>
+
+   

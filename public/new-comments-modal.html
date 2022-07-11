@@ -1,0 +1,32 @@
+<div class="modal fade" id="newCommentModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light">Contribute a Review</h3>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body px-5">
+                <!-- All input to be sent to server, and buttons must be within the 'form' tag -->
+                <form id="commentForm">
+                    <div class="row" text-center id="commentBody">
+                        <label for="nickname">Nickname</label>
+                        <input type="text" id="nickname" class="form-control" value="" readonly>
+                        <label for="userComments">Review</label>
+                        <textarea id="userComments" required class="form-control form-rounded" rows="3"
+                            cols="100%"></textarea>
+                        <label for="popcorn">Rating</label>
+                        <img src="images/popcorn_bw.png" class="pop" value="1" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="pop" value="2" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="pop" value="3" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="pop" value="4" onmouseover="rateIt(this)" />
+                        <img src="images/popcorn_bw.png" class="pop" value="5" onmouseover="rateIt(this)" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitComment"
+                            onClick="addComment()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

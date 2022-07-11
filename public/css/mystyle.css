@@ -1,0 +1,90 @@
+.mystyle{
+    height: 90px;
+    width: 254px;
+    color: white;
+    font-size: smaller;
+}
+
+.flip-container{
+    perspective: 1000px;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper{
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back{
+    height: 100px;
+    width: 254px;
+}
+
+.flipper{
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front{
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+footer{
+    background: #aaa;
+    color: white;
+}
+
+.edit{
+    float: right;
+    padding-right: 10px;
+}
+
+#branding h3{
+    margin:0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+#branding h1 {
+    margin-bottom: 10px;
+    font-size: 37px;
+}
+
+#branding a{
+    text-decoration: none;
+    color: white;
+}
+
+.highlight {
+    color:#e8491D;
+}
+
+#navSupportedContent a:hover{
+    border-bottom: #e8491D 3px solid;
+    font-weight: bold;
+}
+
+
+
+.navbar-nav a:hover{
+    border-bottom: #e8491D 3px solid;
+    font-weight: bold;
+}
+
